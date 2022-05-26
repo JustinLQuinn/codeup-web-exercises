@@ -1,2 +1,2 @@
 # codeup-web-exercises
-## Author: JustinLQuinn
+## JustinLQuinn
