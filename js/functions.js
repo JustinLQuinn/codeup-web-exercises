@@ -103,9 +103,6 @@ alert("Your tip amount will come out to $"+calculateTip(Tip, Bill))
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
-function addDiscount (a, b){
-  var originalPrice = prompt("How much was the item(s)?");
-  var discountPercent = prompt("What is your discount amount?");
-  var afterDiscount = (originalPrice - (originalPrice * discountPercent));
-  alert("Your total after your discount, comes out to $" +afterDiscount)
+function applyDiscount (a, b){
+  return (a - (a * b))
 }
