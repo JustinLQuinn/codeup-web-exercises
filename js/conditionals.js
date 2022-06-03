@@ -113,6 +113,35 @@ alert (analyzeColor(pageOpen))
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
+function calculateTotal(luckyNum, price){
+    if (luckyNum === 0){
+        let discount = (price - (0 * price));
+        return ("Sorry my friend, you get no discount. Your total comes out to $" + discount)
+    }else if (luckyNum === 1){
+        let discount = (price - (0.1 * price));
+        return ("You get a 10% discount, which makes your order come out to $" + discount)
+    }else if (luckyNum === 2){
+        let discount = (price - (0.25 * price));
+        return ("You get a 25% discount, which makes your order come out to $" + discount)
+    }  else if (luckyNum === 3){
+        let discount = (price - (0.35 * price));
+        return ("You get a 35% discount, which makes your order come out to $" + discount)
+    }else if (luckyNum === 4){
+        let discount = (price - (0.50 * price));
+        return ("You get a 50% discount, which makes your order come out to $" + discount)
+    }else if (luckyNum === 5){
+        let discount = (price - (1.00 * price));
+        return ("My lucky Customer!! Today you get a full discount totaling $" + discount)
+    }else{
+        return ("Sorry you did not receive a discount today, Hope you still enjoyed yourself")
+    }
+}
+// console.log(calculateTotal(0, 100));
+// console.log(calculateTotal(1, 100));
+// console.log(calculateTotal(2, 100));
+// console.log(calculateTotal(3, 100));
+// console.log(calculateTotal(4, 100));
+// console.log(calculateTotal(5, 100));
 
 /**
  * TODO:
