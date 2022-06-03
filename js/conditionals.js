@@ -89,8 +89,8 @@ console.log(analyzeColor('blue'));
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
-let pageOpen = prompt("What color best descibes you?");
-alert (analyzeColor(pageOpen))
+// let pageOpen = prompt("What color best descibes you?");
+// alert (analyzeColor(pageOpen))
 
 /* ########################################################################## */
 
@@ -123,7 +123,7 @@ function calculateTotal(luckyNum, price){
     }else if (luckyNum === 2){
         let discount = (price - (0.25 * price));
         return ("You get a 25% discount, which makes your order come out to $" + discount)
-    }  else if (luckyNum === 3){
+    }else if (luckyNum === 3){
         let discount = (price - (0.35 * price));
         return ("You get a 35% discount, which makes your order come out to $" + discount)
     }else if (luckyNum === 4){
@@ -152,7 +152,10 @@ function calculateTotal(luckyNum, price){
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+var luckyNumber = Math.floor(Math.random() * 6);
+var totalBill = prompt("Hello customer, what was the total of your bill today?")
+alert ("Your lucky number was "+luckyNumber+ ". Your price before the discount was $"+totalBill+
+    ". "+(calculateTotal(luckyNumber, totalBill)))
 
 /**
  * TODO:
