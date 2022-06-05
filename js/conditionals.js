@@ -47,8 +47,8 @@
 // - `colors`: a list of the colors of the rainbow
 // - `randomColor`: contains a single random color value from the list (this
 //                  will contain a different color every time the page loads)
-let colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
-let randomColor = colors[Math.floor(Math.random() * colors.length)];
+// let colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+// let randomColor = colors[Math.floor(Math.random() * colors.length)];
 /**
  * TODO:
  * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
@@ -61,26 +61,26 @@ let randomColor = colors[Math.floor(Math.random() * colors.length)];
  * TODO:
  * Comment out the code above, and refactor your function to use a switch-case statement
  */
-function analyzeColor(color) {
-    switch (color) {
-        case ('blue'):
-            return "Blue is a very calming color!";
-            break;
-        case('green'):
-            return "Green reminds me of the grass between my toes in a country field.";
-            break;
-        case('red'):
-            return "Red is an Anger trigger for me.";
-            break;
-        case('agua'):
-            return "Agua is a very cool color on a car.";
-            break;
-        default:
-            return "I do not understand your response!??";
-
-    }
-}
-console.log(analyzeColor('blue'));
+// function analyzeColor(color) {
+//     switch (color) {
+//         case ('blue'):
+//             return "Blue is a very calming color!";
+//             break;
+//         case('green'):
+//             return "Green reminds me of the grass between my toes in a country field.";
+//             break;
+//         case('red'):
+//             return "Red is an Anger trigger for me.";
+//             break;
+//         case('agua'):
+//             return "Agua is a very cool color on a car.";
+//             break;
+//         default:
+//             return "I do not understand your response!??";
+//
+//     }
+// }
+// console.log(analyzeColor('blue'));
 
 
 /**
@@ -113,29 +113,29 @@ console.log(analyzeColor('blue'));
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
-function calculateTotal(luckyNum, price){
-    if (luckyNum === 0){
-        let discount = (price - (0 * price));
-        return ("Sorry my friend, you get no discount. Your total comes out to $" + discount)
-    }else if (luckyNum === 1){
-        let discount = (price - (0.1 * price));
-        return ("You get a 10% discount, which makes your order come out to $" + discount)
-    }else if (luckyNum === 2){
-        let discount = (price - (0.25 * price));
-        return ("You get a 25% discount, which makes your order come out to $" + discount)
-    }else if (luckyNum === 3){
-        let discount = (price - (0.35 * price));
-        return ("You get a 35% discount, which makes your order come out to $" + discount)
-    }else if (luckyNum === 4){
-        let discount = (price - (0.50 * price));
-        return ("You get a 50% discount, which makes your order come out to $" + discount)
-    }else if (luckyNum === 5){
-        let discount = (price - (1.00 * price));
-        return ("My lucky Customer!! Today you get a full discount totaling $" + discount)
-    }else{
-        return ("Sorry you did not receive a discount today, Hope you still enjoyed yourself")
-    }
-}
+// function calculateTotal(luckyNum, price){
+//     if (luckyNum === 0){
+//         let discount = (price - (0 * price));
+//         return ("Sorry my friend, you get no discount. Your total comes out to $" + discount)
+//     }else if (luckyNum === 1){
+//         let discount = (price - (0.1 * price));
+//         return ("You get a 10% discount, which makes your order come out to $" + discount)
+//     }else if (luckyNum === 2){
+//         let discount = (price - (0.25 * price));
+//         return ("You get a 25% discount, which makes your order come out to $" + discount)
+//     }else if (luckyNum === 3){
+//         let discount = (price - (0.35 * price));
+//         return ("You get a 35% discount, which makes your order come out to $" + discount)
+//     }else if (luckyNum === 4){
+//         let discount = (price - (0.50 * price));
+//         return ("You get a 50% discount, which makes your order come out to $" + discount)
+//     }else if (luckyNum === 5){
+//         let discount = (price - (1.00 * price));
+//         return ("My lucky Customer!! Today you get a full discount totaling $" + discount)
+//     }else{
+//         return ("Sorry you did not receive a discount today, Hope you still enjoyed yourself")
+//     }
+// }
 // console.log(calculateTotal(0, 100));
 // console.log(calculateTotal(1, 100));
 // console.log(calculateTotal(2, 100));
@@ -152,10 +152,10 @@ function calculateTotal(luckyNum, price){
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-var luckyNumber = Math.floor(Math.random() * 6);
-var totalBill = prompt("Hello customer, what was the total of your bill today?")
-alert ("Your lucky number was "+luckyNumber+ ". Your price before the discount was $"+totalBill+
-    ". "+(calculateTotal(luckyNumber, totalBill)))
+// var luckyNumber = Math.floor(Math.random() * 6);
+// var totalBill = prompt("Hello customer, what was the total of your bill today?")
+// alert ("Your lucky number was "+luckyNumber+ ". Your price before the discount was $"+totalBill+
+//     ". "+(calculateTotal(luckyNumber, totalBill)))
 
 /**
  * TODO:
@@ -175,3 +175,12 @@ alert ("Your lucky number was "+luckyNumber+ ". Your price before the discount w
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+let askEntry = confirm("Would you like to enter a number?")
+    if (askEntry === true) {
+        var entry = prompt("Please Enter your number.");
+
+    }else{
+        alert("Have a nice day!")
+    }
+
+
