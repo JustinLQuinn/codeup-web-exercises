@@ -89,7 +89,7 @@
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
-// let pageOpen = prompt("What color best descibes you?");
+// let pageOpen = prompt("What color best describes you?");
 // alert (analyzeColor(pageOpen))
 
 /* ########################################################################## */
@@ -175,21 +175,13 @@
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
-let askEntry = confirm("Would you like to enter a number?");{
+let askEntry = confirm("Would you like to enter a number?")
     if (askEntry === true) {
         let entry = prompt("Please Enter your number.");
-        let num = parseFloat(entry);{
-            else if (num === NaN);
-                alert("Incorrect data type")
-        }else if (num === number);{
-
-
-        }
-
-
+        let
     }else{
         alert("Have a nice day!")
     }
 
-}
+
 
