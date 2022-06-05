@@ -175,12 +175,21 @@
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
-let askEntry = confirm("Would you like to enter a number?")
+let askEntry = confirm("Would you like to enter a number?");{
     if (askEntry === true) {
-        var entry = prompt("Please Enter your number.");
+        let entry = prompt("Please Enter your number.");
+        let num = parseFloat(entry);{
+            else if (num === NaN);
+                alert("Incorrect data type")
+        }else if (num === number);{
+
+
+        }
+
 
     }else{
         alert("Have a nice day!")
     }
 
+}
 
