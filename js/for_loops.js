@@ -1,7 +1,7 @@
-"use strict";
+
 
 // function showMultiplicationTable (num){
-// for (var i = 0; i < 10; i++){
+// for (let i = 0; i < 10; i++){
 //    console.log(num+"*"+i+"="+(num*i))
 //
 // }
@@ -16,7 +16,7 @@
 //       }
 //    }
 // for (let i = 1 ; i <= 10; i++){
-//    var ranNum = (Math.floor(Math.random() * 200) + 20);
+//    let ranNum = (Math.floor(Math.random() * 200) + 20);
 //    if (ranNum % 2 === 0){
 //       console.log(ranNum + " is an Even number.")
 //    }else{
@@ -24,7 +24,14 @@
 //    }
 //
 // }
+//
+// for (let i = 1; i <= 9; i++){
+//   let iAsString = i.toString();
+//    console.log(iAsString.repeat(i));
+// }
+//
+// for (let i = 100; i > 0; i--){
+//     console.log(i);
+//     i= i-4;
+// }
 
-for (let i = 1; i <= 9; i++){
-   console.log(i)
-}
