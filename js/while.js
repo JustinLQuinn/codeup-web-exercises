@@ -8,3 +8,5 @@
 var allCones = Math.floor(Math.random() * 50) + 50;
 var soldCones = Math.floor(Math.random() * 5) + 1;
 
+while ()
+
