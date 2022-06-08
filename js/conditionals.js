@@ -201,7 +201,3 @@ let askEntry = confirm("Would you like to enter a number?")
         alert("Have a nice day!")
     }
 
-
-
-
-

@@ -23,4 +23,3 @@ function sellOut() {
     console.log("I have sold all of my product!!!");
 }
 sellOut()
-
