@@ -11,7 +11,7 @@ function sellOut() {
     do {
         customer++;
         let soldCones = Math.floor(Math.random() * 5) + 1;
-        console.log("Customer bought " + soldCones + " cones. I started with " + allCones + " cones.");
+        console.log("Customer wanted " + soldCones + " cone(s). I have " + allCones + " cones remaining.");
         if (soldCones > allCones) {
             console.log("Sorry I do not have enough cones remaining.");
         } else {
