@@ -43,4 +43,7 @@
     indexEarth = planets.indexOf('Earth')
     console.log(indexEarth);
 
+    indexEarth = planets.lastIndexOf('Earth')
+    console.log(indexEarth);
+
 })();
