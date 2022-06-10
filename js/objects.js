@@ -73,7 +73,7 @@ var person; {
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
-var books = [
+let books = [
     {
         title : "Of Mice and Men",
         author: {
@@ -111,7 +111,7 @@ var books = [
         }
     ];
 
-    // console.log(books[2].author.firstName);
+    // console.log(books[2].author);
     /**
      * TODO:
      * Loop through the books array and output the following information about
@@ -155,5 +155,12 @@ var index = (books.indexOf(book) + 1);
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+
+    function createBook(input){
+       var bookInfo = new Object("title","author")
+           {prompt("What is your books title?")}
+
+    }
+
 
 })();
