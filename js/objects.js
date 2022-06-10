@@ -11,12 +11,12 @@
      *  > console.log(person.firstName) // "Rick"
      *  > console.log(person.lastName) // "Sanchez"
      */
-    var person = {
-        firstName: "Justin",
-        lastName: "Quinn"
-    };
-    console.log(person.firstName);
-    console.log(person.lastName)
+    // var person = {
+    //     firstName: "Justin",
+    //     lastName: "Quinn"
+    // };
+    // console.log(person.firstName);
+    // console.log(person.lastName)
     /**
      * TODO:
      * Add a sayHello method to the person object that returns a greeting using
@@ -27,10 +27,10 @@
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
 
-var person; {
-    person.sayHello = alert("Hello " + person.firstName+" "+ person.lastName);
-}
-    console.log(person.sayHello);
+// var person; {
+//     person.sayHello = alert("Hello " + person.firstName+" "+ person.lastName);
+// }
+//     console.log(person.sayHello);
 
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
@@ -46,12 +46,21 @@ var person; {
      * and console.log the relevant messages for each person
      */
 
-    var shoppers = [
-        {name: 'Cameron', amount: 180},
-        {name: 'Ryan', amount: 250},
-        {name: 'George', amount: 320}
-    ];
-
+    // var shoppers = [
+    //     {name: 'Cameron', amount: 180},
+    //     {name: 'Ryan', amount: 250},
+    //     {name: 'George', amount: 320}
+    // ];
+    // // console.log(shoppers[0].name);
+    //
+    // shoppers.forEach(function (shopper){
+    //     if (shopper.amount > 200) {
+    //         let afterDiscount = shopper.amount * 0.88;
+    //         console.log(shopper.name + " thank you for spending $" + shopper.amount + ". You get a discount of 12%, that makes your total now $" + afterDiscount + ".");
+    //     }else{
+    //         console.log(shopper.name +" thank you for spending $"+shopper.amount+".")
+    //     }
+    // })
     /** TODO:
      * Create an array of objects that represent books and store it in a
      * variable named `books`. Each object should have a title and an author
@@ -64,7 +73,45 @@ var person; {
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+var books = [
+    {
+        title : "Of Mice and Men",
+        author: {
+            firstName: "John",
+            lastName: "Steinbeck"
+        }
+    },
+     {
+        title: "Charlotte's Web",
+        author: {
+            firstName: "Elwyn",
+            lastName: "White"
+        }
+     },
+     {
+         title: "Put Me in the Zoo",
+         author: {
+            firstName: "Robert",
+            lastName: "Lopshire"
+        }
+    },
+    {
+        title: "The Firm",
+        author: {
+            firstName: "John",
+            lastName: "Grisham"
+        }
+    },
+        {
+        title: "Twilight",
+        author: {
+            firstName: "Stephenie",
+            lastName: "Meyer"
+            }
+        }
+    ];
 
+    console.log(books[0].title)
     /**
      * TODO:
      * Loop through the books array and output the following information about
