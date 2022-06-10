@@ -111,7 +111,7 @@ var books = [
         }
     ];
 
-    console.log(books[0].title)
+    // console.log(books[2].author.firstName);
     /**
      * TODO:
      * Loop through the books array and output the following information about
@@ -136,6 +136,14 @@ var books = [
      *      ---
      *      ...
      */
+books.forEach(function(book){
+var index = (books.indexOf(book) + 1);
+    console.log("Book #"+index);
+    console.log("Title: "+book.title);
+    console.log("Author: "+book.firstName+" "+book.lastName);
+    console.log("--------------");
+    });
+
 
     /**
      * Bonus:
