@@ -156,16 +156,24 @@
      *   `showBookInfo` function.
      */
 
-    function createBook() {
-        var Author = prompt("Who is your books author?");
-        var Title = prompt("What is your books title?")
+    var nowISee = function createBook() {
+        // let Author = prompt("Who is your books author?");
+        // let Title = prompt("What is your books title?");
+        return {
+            author: prompt("Who is your books author?"),
+            title: prompt("What is your books title?")
 
-        let book = { };
-            book.author = Author;
-            book.title = Title
-console.log(book);
-    }
-createBook()
+        }
+    };
+
+        function showBookInfo() {
+            var uSee = nowISee();
+            console.log(uSee);
+        }
+showBookInfo()
+
 
 
 })();
+
+
