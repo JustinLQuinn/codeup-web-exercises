@@ -44,9 +44,24 @@ const users = [
 //     return user.email
 // });
 
-// const averageYearsExperience = users.reduce((total,user)=>{
-//     let totalYears = total + user.yearsOfExperience;
-//     return totalYears / users.length;
+// var totalYearsExperience = users.reduce((total,user)=>{
+//     return  total + user.yearsOfExperience;
 // }, 0);
+//
+// var averageYears = totalYearsExperience / users.length
+
 // console.log(averageYearsExperience);
 
+const longestEmail = users.reduce(function(longestEmailSoFar, user){
+    if(user.email.length > longestEmailSoFar.length) {
+    return user.email;
+}
+return longestEmailSoFar;
+}, "");
+
+users.reduce(function(allUserNamesSoFar,user){
+    return allUserNamesSoFar + user.name + ", ";
+});
+allUserNames = allUserNames.substr(0,allUserNames.length -2);
+
+console.log(allUserNames);
