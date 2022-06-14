@@ -44,3 +44,9 @@ const users = [
 //     return user.email
 // });
 
+// const averageYearsExperience = users.reduce((total,user)=>{
+//     let totalYears = total + user.yearsOfExperience;
+//     return totalYears / users.length;
+// }, 0);
+// console.log(averageYearsExperience);
+
