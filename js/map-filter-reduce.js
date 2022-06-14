@@ -40,3 +40,7 @@ const users = [
 //     return user.languages.length >= 3
 // });
 
+// const Emails = users.map(function(user){
+//     return user.email
+// });
+
