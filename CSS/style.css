@@ -1,7 +1,13 @@
-h1 {
+h3 {
     color: purple;
     border: 2px dotted goldenrod;
 }
 
 /* this is a comment */
 
+.fancy-header {
+    color: blue;
+    text-decoration: underline;
+}
+
+}
