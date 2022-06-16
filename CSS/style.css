@@ -10,3 +10,29 @@ h3 {
     text-decoration: underline;
 }
 
+h1 {
+    text-align: center;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color: deeppink;
+    text-decoration: underline
+}
+body{
+    /*background-color: gold;*/
+    background-image: url("../assets/Matrix.jpg");/*image was pulled from:https://wallpapersafari.com*/
+    background-size: 1200px 1500px;
+    background-repeat: no-repeat;
+    background-position-x: ;
+    background-position-y: ;
+    background-blend-mode: ;
+
+}
+body{
+    font-family: ;
+    font-size: ;
+}
+
+/*h3 table tr,td {*/
+/*    text-decoration-color: red;*/
+/*}*/
