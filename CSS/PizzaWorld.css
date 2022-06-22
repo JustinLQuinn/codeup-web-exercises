@@ -1,0 +1,15 @@
+.nav-item{
+    list-style: none;
+}
+li .nav-item{
+    flex-direction: row;
+}
+.form-inline{
+    display: -webkit-box;
+}
+input.form-control{
+    width: 10em;
+}
+.nav-link.sign-up{
+   margin-left: auto;
+}
