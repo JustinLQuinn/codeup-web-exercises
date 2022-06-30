@@ -1,0 +1,18 @@
+this methid will stop the timer, but only while this code is running. Once code stops; countdown continues........
+    function defuseTheBOM() {
+        if (detonationTimer > 0) {
+            document.getElementById('timer').innerHTML = detonationTimer;
+            alert("You have saved the Day!!!"); //the alert is pausing the countdown//
+        }
+        detonationTimer++;
+       }
+this will stop the counter.......
+ function defuseTheBOM() {
+        clearInterval(timer);
+        alert("You have saved the Day!!!")
+    }
+    
+     function defuseTheBOM() {
+        if (detonationTimer === '2') {
+     break,              
+    }
