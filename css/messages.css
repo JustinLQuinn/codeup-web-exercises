@@ -37,3 +37,6 @@ body, html {
     max-width: 30em;
     border-radius: 5px;
 }
+.message{
+    margin: .5em;
+}
