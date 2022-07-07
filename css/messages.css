@@ -3,5 +3,37 @@ body, html {
     width: 100%;
     padding: 0;
     margin: 0;
-    font-family: Arial, Ubuntu, sans-serif;
+    font-family: Beirut, Ubuntu, sans-serif;
+}
+.message-info{
+    border: solid;
+    border-color: #848487;
+    background-color: deepskyblue;
+    color: blue;
+    max-width: 30em;
+    border-radius: 5px;
+}
+.message-success{
+    border: solid;
+    border-color: #848487;
+    background-color: lawngreen;
+    color: darkgreen;
+    max-width: 30em;
+    border-radius: 5px;
+}
+.message-warning{
+    border: solid;
+    border-color: #848487;
+    background-color: yellow;
+    color: yellowgreen;
+    max-width: 30em;
+    border-radius: 5px;
+}
+.message-error{
+    border: solid;
+    border-color: #848487;
+    background-color: red;
+    color: darkred;
+    max-width: 30em;
+    border-radius: 5px;
 }
