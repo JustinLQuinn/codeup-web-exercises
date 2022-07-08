@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konami</title>
+</head>
+<body>
+<h1 id="code-1">Konami Code</h1>
+
+<script>
+    "use strict";
+
+  const konami = ["ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight", "b", "a", "Enter"];
+    const trackKeys = [];
+    document.addEventListener("keyup", function(event) {
+        console.log(event.key);
+        trackKeys.push(event.key);
+        console.log(trackKeys);
+    });
+    document.addEventListener("keyup", win);
+    function win() {
+        if (trackKeys.toString().includes(konami.toString())){
+        alert("You won!!");
+        trackKeys.length = 0;
+
+
+        }
+
+    }
+
+
+</script>
+</body>
+</html>
