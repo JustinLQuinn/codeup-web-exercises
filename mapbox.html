@@ -21,10 +21,30 @@
 
 <!-- The HTML element that serves as the Mapbox container -->
 <div id='map'></div>
+<button class="zoom-in">zoom in</button>
+<button class="zoom-out">zoom out</button>
+<br>
+<div>
+  <input id="input1">
+  <button class="input1-1">Point to Location</button>
+</div>
+<div class="container">
+  <div>
+    <div class="row row1">
+<!--   default setting is already North-->
+    <button class="input1-2" id="orientNorth">Point to North</button>
+    </div>
+    <div class="row row2">
+    <button class="input1-2" id="orientWest">Point West</button>
+    <button class="input1-2" id="orientEast">Point East</button>
+    </div>
+    <div class="row row3">
+    <button class="input1-2" id="orientSouth">Point South</button>
+    </div>
+  </div>
+</div>
 
-<!-- Mapbox JS -->
 <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
-
 <script src="js/keys.js"></script>
 <!-- Custom JS -->
 <script>
@@ -37,7 +57,6 @@
       zoom: 10,
       center: [-98.4916, 29.4252]
     });
-
     function getLatLngFromAddress(address, token = MAPBOX_API_KEY) {
       var baseUrl = 'https://api.mapbox.com';
       var endPoint = '/geocoding/v5/mapbox.places/';
@@ -63,12 +82,49 @@
     }
 
 
-  let coords = await getLatLngFromAddress("256_West_Villaret,SanAntonio,Texas");
+  let coords = await getLatLngFromAddress("Belton, TX");
   console.log(coords);
 
-  const belton = new mapboxgl.Marker();
-  belton.setLngLat(coords);
-  belton.addTo(map);
+  // const belton = new mapboxgl.Marker();
+  // belton.setLngLat(coords);
+  // belton.addTo(map);
+
+    const zoomIn = document.querySelector(".zoom-in");
+    zoomIn.addEventListener("click", function (event) {
+      let currentZoom = map.getZoom();
+      currentZoom++;
+      map.setZoom(currentZoom);
+    });
+    const zoomOut = document.querySelector(".zoom-out");
+    zoomOut.addEventListener("click", function (event) {
+      let currentZoom = map.getZoom();
+      currentZoom--;
+      map.setZoom(currentZoom);
+    });
+const addressInfo = document.getElementsByClassName("input1-1");
+const addressInput = document.getElementById("input1")
+    addressInfo[0].addEventListener("click",async function(event){
+      let coords = await getLatLngFromAddress(addressInput.value);
+// console.log(coords);
+      const marker = new mapboxgl.Marker();
+      marker.setLngLat(coords);
+      marker.addTo(map);
+
+    });
+    // addressInfo[0].addEventListener("click", function (event) {
+    //   // add a popup to this
+    //   let popup = new mapboxgl.Popup();
+    //   popup.setLngLat([-98, 28])
+    //   popup.setHTML("<h1>Codeup Rocks!</h1><img src='assets/cthulhu.jpeg'>")
+    //
+    //   let marker = new mapboxgl.Marker();
+    //
+    //   marker.setPopup(popup);
+    //   marker.setLngLat([-98, 28]);
+    //   marker.addTo(map);
+    //
+    // });
+
   })();
 </script>
 </body>
