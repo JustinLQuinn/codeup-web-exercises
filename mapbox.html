@@ -13,6 +13,18 @@
       width: 100%;
       height: 400px;
     }
+    .box{
+        display: flex;
+        flex-direction: row;
+        align-self: end;
+        height: 55px;
+        width: 85px;
+    }
+    .input1-2{
+        display: flex;
+        height: 25px;
+        width: 25px;
+    }
   </style>
 </head>
 <body>
@@ -21,28 +33,31 @@
 
 <!-- The HTML element that serves as the Mapbox container -->
 <div id='map'></div>
-<button class="zoom-in">zoom in</button>
-<button class="zoom-out">zoom out</button>
+<div class="container">
+    <div class="row">
+        <button class="zoom-in">zoom in</button>
+        <button class="zoom-out">zoom out</button>
+        <div class="box">
+            <div class="row row1">
+                <!--   default setting is already North-->
+                <button class="input1-2" id="orientNorth">N</button>
+            </div>
+            <div class="row row2">
+                <button class="input1-2" id="orientWest">W</button>
+                <button class="input1-2" id="orientEast">E</button>
+            </div>
+            <div class="row row3">
+                <button class="input1-2" id="orientSouth">S</button>
+            </div>
+        </div>
+    </div>
+</div>
 <br>
 <div>
   <input id="input1">
   <button class="input1-1">Point to Location</button>
 </div>
-<div class="container">
-  <div>
-    <div class="row row1">
-<!--   default setting is already North-->
-    <button class="input1-2" id="orientNorth">Point to North</button>
-    </div>
-    <div class="row row2">
-    <button class="input1-2" id="orientWest">Point West</button>
-    <button class="input1-2" id="orientEast">Point East</button>
-    </div>
-    <div class="row row3">
-    <button class="input1-2" id="orientSouth">Point South</button>
-    </div>
-  </div>
-</div>
+
 
 <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
 <script src="js/keys.js"></script>
@@ -55,7 +70,8 @@
       container: 'map',
       style: 'mapbox://styles/mapbox/streets-v9',
       zoom: 10,
-      center: [-98.4916, 29.4252]
+      center: [-98.4916, 29.4252],
+      bearing: -0
     });
     function getLatLngFromAddress(address, token = MAPBOX_API_KEY) {
       var baseUrl = 'https://api.mapbox.com';
@@ -81,9 +97,8 @@
       });
     }
 
-
   let coords = await getLatLngFromAddress("Belton, TX");
-  console.log(coords);
+  // console.log(coords);
 
   // const belton = new mapboxgl.Marker();
   // belton.setLngLat(coords);
@@ -124,6 +139,18 @@ const addressInput = document.getElementById("input1")
     //   marker.addTo(map);
     //
     // });
+      document.getElementById("orientNorth").addEventListener("click", function(event) {
+          map.setBearing(0);
+      });
+      document.getElementById("orientEast").addEventListener("click", function(event) {
+          map.setBearing(90);
+      });
+      document.getElementById("orientSouth").addEventListener("click", function(event) {
+          map.setBearing(180);
+      });
+      document.getElementById("orientWest").addEventListener("click", function(event) {
+          map.setBearing(270);
+      });
 
   })();
 </script>
