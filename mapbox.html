@@ -19,11 +19,13 @@
         align-self: end;
         height: 55px;
         width: 85px;
+        border: 3px, solid, black;
     }
     .input1-2{
         display: flex;
         height: 25px;
         width: 25px;
+
     }
   </style>
 </head>
@@ -54,7 +56,7 @@
 </div>
 <br>
 <div>
-  <input id="input1">
+  <input type="text" value="Paris, TX" id="input1">
   <button class="input1-1">Point to Location</button>
 </div>
 
@@ -116,6 +118,7 @@
       currentZoom--;
       map.setZoom(currentZoom);
     });
+    //identify button and Input field. then add eventlistener.
 const addressInfo = document.getElementsByClassName("input1-1");
 const addressInput = document.getElementById("input1")
     addressInfo[0].addEventListener("click",async function(event){
@@ -130,7 +133,7 @@ const addressInput = document.getElementById("input1")
     //   // add a popup to this
     //   let popup = new mapboxgl.Popup();
     //   popup.setLngLat([-98, 28])
-    //   popup.setHTML("<h1>Codeup Rocks!</h1><img src='assets/cthulhu.jpeg'>")
+    //   popup.setHTML("<h1>Codeup Rocks!</h1><img src='assets/Sunset.png'>")
     //
     //   let marker = new mapboxgl.Marker();
     //
