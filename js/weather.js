@@ -3,10 +3,9 @@ function weatherCards(dailyForecasts){
     weatherCardsInfo.innerHTML = `
     <div class="card">
         <div class="card-title">
-            <h2>Day 1</h2>
+            <h2>${new Date(dailyForecasts[0].dt * 1000).toDateString()}</h2>
         </div>
         <div class="card-body">
-            <p>(DTC)</p>
             <ul class="feature-list">
                 <li class="feature-item">Humidity: ${dailyForecasts[0].humidity}</li>
                 <li class="feature-item">Hi temp: ${parseInt(dailyForecasts[0].temp.max)}</li>
@@ -18,10 +17,9 @@ function weatherCards(dailyForecasts){
     </div>
     <div class="card">
         <div class="card-title">
-            <h2>Day 2</h2>
+            <h2>${new Date(dailyForecasts[1].dt * 1000).toDateString()}</h2>
         </div>
         <div class="card-body">
-            <p>(DTC)</p>
             <ul class="feature-list">
                 <li class="feature-item">Humidity: ${dailyForecasts[1].humidity}</li>
                 <li class="feature-item">Hi temp: ${parseInt(dailyForecasts[1].temp.max)}</li>
@@ -33,10 +31,9 @@ function weatherCards(dailyForecasts){
     </div>
     <div class="card">
         <div class="card-title">
-            <h2>Day 3</h2>
+            <h2>${new Date(dailyForecasts[2].dt * 1000).toDateString()}</h2>
         </div>
         <div class="card-body">
-            <p>(DTC)</p>
             <ul class="feature-list">
                 <li class="feature-item">Humidity: ${dailyForecasts[2].humidity}</li>
                 <li class="feature-item">Hi temp: ${parseInt(dailyForecasts[2].temp.max)}</li>
@@ -48,10 +45,9 @@ function weatherCards(dailyForecasts){
     </div>
     <div class="card">
         <div class="card-title">
-            <h2>Day 4</h2>
+            <h2>${new Date(dailyForecasts[3].dt * 1000).toDateString()}</h2>
         </div>
         <div class="card-body">
-            <p>(DTC)</p>
             <ul class="feature-list">
                 <li class="feature-item">Humidity: ${dailyForecasts[3].humidity}</li>
                 <li class="feature-item">Hi temp: ${parseInt(dailyForecasts[3].temp.max)}</li>
@@ -63,10 +59,9 @@ function weatherCards(dailyForecasts){
     </div>
     <div class="card">
         <div class="card-title">
-            <h2>Day 5</h2>
+            <h2>${new Date(dailyForecasts[4].dt * 1000).toDateString()}</h2>
         </div>
         <div class="card-body">
-            <p>(DTC)</p>
             <ul class="feature-list">
                 <li class="feature-item">Humidity: ${dailyForecasts[4].humidity}</li>
                 <li class="feature-item">Hi temp: ${parseInt(dailyForecasts[4].temp.max)}</li>
@@ -76,7 +71,7 @@ function weatherCards(dailyForecasts){
             </ul>
         </div>
     </div>`
-}
 
+}
 
 
