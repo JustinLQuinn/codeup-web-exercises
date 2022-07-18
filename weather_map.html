@@ -15,15 +15,17 @@
         <div>${Location}</div>
     </div>
 </div>
+<div id="weatherCardsInfo" class="container"></div>
+
 <div>
     <input type="text" value="San Antonio, TX" id="input1">
     <button class="input1-1">Location Info</button>
 </div>
-    <div id='map'></div>
+    <div id="map"></div>
 
     <script src="js/keys.js"></script>
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
-
+    <script src="js/weather.js"></script>
 <script>
 (async function(){
             mapboxgl.accessToken = MAPBOX_API_KEY;
@@ -53,44 +55,19 @@ function getForcast(lngLat) {
         lon:   `${lngLat.lng}`,
         units: "imperial"
     });
-    fetch("http://api.openweathermap.org/data/2.5/weather?" + queryParams, {
+    fetch("http://api.openweathermap.org/data/2.5/onecall?" + queryParams, {
             method: "GET"
         }
     ).then(async function (response) {
-        console.log(await response.json());
-
+        let weatherData = await response.json();
+        // for (let i = 0; i < weatherData.daily.length; i++) {
+            console.log(weatherData.daily);
+            weatherCards(weatherData.daily);
+        // }
     });
+
 }
 
-
-//
-//         async function getLatLngFromAddress(address, token = MAPBOX_API_KEY) {
-//             var baseUrl = 'https://api.mapbox.com';
-//             var endPoint = '/geocoding/v5/mapbox.places/';
-//             return fetch(baseUrl + endPoint + encodeURIComponent(address) + '.json' + "?" + 'access_token=' + token)
-//                 .then(function (response) {
-//                     return response.json();
-//                 }).then(function (data) {
-//                     console.log(data);
-//                     return data.features[0].center;
-//                 });
-//
-//             let coords = await getLatLngFromAddress("San Antonio, Texas");
-// console.log(coords);
-        //
-        //
-        //     const addressInfo = document.getElementsByClassName("input1-1");
-        //     const addressInput = document.getElementById("input1")
-        //     addressInfo[0].addEventListener("click", async function (event) {
-        //         let coords = await getLatLngFromAddress(addressInput.value);
-        //         });
-        //     const marker = new mapboxgl.Marker();
-        //     marker.setLngLat(coords);
-        //     marker.addTo(map);
-        //
-
-        //
-        // }
 
         })();
 </script>

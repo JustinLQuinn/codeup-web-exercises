@@ -6,3 +6,6 @@
 .row{
     display: flex;
 }
+#weatherCardsInfo{
+    display: flex;
+}
