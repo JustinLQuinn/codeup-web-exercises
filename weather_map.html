@@ -9,10 +9,9 @@
     <link rel="stylesheet" href="css/weather.css">
 </head>
 <body>
-<div class="Header">
+<div class="Header" id="HomeInfo">
     <div class="row">
         <h1>Weather App</h1>
-        <div>${Location}</div>
     </div>
 </div>
 <div id="weatherCardsInfo" class="container"></div>
@@ -23,9 +22,14 @@
 </div>
     <div id="map"></div>
 
+<h4>Home Weather</h4>
+<div class="footer">
+
+</div>
     <script src="js/keys.js"></script>
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
-    <script src="js/weather.js"></script>
+    <script src="js/homeForecast.js"></script>
+    <script src="js/fiveDayForecast.js"></script>
 <script>
 (async function(){
             mapboxgl.accessToken = MAPBOX_API_KEY;
@@ -43,32 +47,11 @@
     marker.addTo(map)
     function onDragEnd() {
             const lngLat = marker.getLngLat();
-        console.log(lngLat);
         getForcast(lngLat)
     }
     marker.on('dragend', onDragEnd);
 
-function getForcast(lngLat) {
-    let queryParams = new URLSearchParams({
-        APPID: OPENWEATHER_API_KEY,
-        lat:    `${lngLat.lat}`,
-        lon:   `${lngLat.lng}`,
-        units: "imperial"
-    });
-    fetch("http://api.openweathermap.org/data/2.5/onecall?" + queryParams, {
-            method: "GET"
-        }
-    ).then(async function (response) {
-        let weatherData = await response.json();
-        // for (let i = 0; i < weatherData.daily.length; i++) {
-            console.log(weatherData.daily);
-            weatherCards(weatherData.daily);
-        // }
-    });
-
-}
-
-
+    getHomeForcast();
         })();
 </script>
 </body>

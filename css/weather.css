@@ -17,4 +17,13 @@
     border-radius: 2px;
     border-style: solid;
     border-radius: 10%;
+    justify-content: center;
+}
+.footer {
+    display: flex;
+    text-align: center;
+}
+.footer-card{
+    margin: 5px;
+    width: 115px
 }

@@ -1,18 +1,32 @@
+function getForcast(lngLat) {
+    let queryParams = new URLSearchParams({
+        APPID: OPENWEATHER_API_KEY,
+        lat: `${lngLat.lat}`,
+        lon: `${lngLat.lng}`,
+        units: "imperial"
+    });
+    fetch("http://api.openweathermap.org/data/2.5/onecall?" + queryParams, {
+            method: "GET"
+        }
+    ).then(async function (response) {
+        let weatherData = await response.json();
+        console.log(weatherData.daily);
+        weatherCards(weatherData.daily);
+    })
+}
 const weatherCardsInfo = document.getElementById("weatherCardsInfo")
-function weatherCards(dailyForecasts){
+function weatherCards(dailyForecasts) {
     weatherCardsInfo.innerHTML = `
     <div class="card">
         <div class="card-title">
             <h2>${new Date(dailyForecasts[0].dt * 1000).toDateString()}</h2>
         </div>
         <div class="card-body">
-            <ul class="feature-list">
                 <li class="feature-item">Humidity: ${dailyForecasts[0].humidity}</li>
                 <li class="feature-item">Hi temp: ${parseInt(dailyForecasts[0].temp.max)}</li>
                 <li class="feature-item">Low temp: ${parseInt(dailyForecasts[0].temp.min)}</li>
                 <li class="feature-item">Feels like: ${parseInt(dailyForecasts[0].feels_like.day)}</li>
                 <li class="feature-item">Wind: ${parseInt(dailyForecasts[0].wind_gust)}</li>
-            </ul>
         </div>
     </div>
     <div class="card">
@@ -71,7 +85,6 @@ function weatherCards(dailyForecasts){
             </ul>
         </div>
     </div>`
-
 }
 
 
