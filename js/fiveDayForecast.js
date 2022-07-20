@@ -10,7 +10,6 @@ function getForcast(lngLat) {
         }
     ).then(async function (response) {
         let weatherData = await response.json();
-        console.log(weatherData.daily);
         weatherCards(weatherData.daily);
     })
 }
@@ -22,9 +21,7 @@ function weatherCards(dailyForecasts) {
         dts.push(dailyForecasts[i].dt);
         let date = (new Date(dailyForecasts[i].dt * 1000).toDateString()).split(" ");
         dayName.push(date[0]);
-        console.log(dayName);
     }
-
     weatherCardsInfo.innerHTML = `
     <div class="card">
         <div class="card-title">

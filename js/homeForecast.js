@@ -10,33 +10,30 @@
          }
      ).then(async function (response) {
          let homeData = await response.json();
-         console.log(homeData.daily);
-         homeWeather(homeData.daily)
+         homeWeather(homeData.daily, homeData)
      })
-
      const homeCardsInfo = document.querySelector(".footer");
-     function homeWeather(dailyForecasts) {
+     function homeWeather(dailyForecasts, home) {
          let dts = [];
          let dayName = [];
          for (let i = 0; i < dailyForecasts.length; i++) {
              dts.push(dailyForecasts[i].dt);
              let date = (new Date(dailyForecasts[i].dt * 1000).toDateString()).split(" ");
              dayName.push(date[0]);
-             console.log(dayName);
          }
-
+         console.log(home);
          homeCardsInfo.innerHTML = `
     <div class="card footer-card">
         <div class="card-title">
             <h2>${dayName[0]}</h2>
         </div>
         <div class="card-body">
+            Current: ${parseInt(home.current.temp)}<br>
             Humidity: ${dailyForecasts[0].humidity}<br>
             Hi temp: ${parseInt(dailyForecasts[0].temp.max)}<br>
             Low temp: ${parseInt(dailyForecasts[0].temp.min)}<br>
             Feels like: ${parseInt(dailyForecasts[0].feels_like.day)}<br>
             Wind: ${parseInt(dailyForecasts[0].wind_gust)}<br>
-          
         </div>
     </div>
     <div class="card footer-card">
