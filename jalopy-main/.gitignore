@@ -1,11 +1,10 @@
-.idea
-*.iml
 .DS_Store
-
-keys.js
 
 private_constants.js
 config.js
+keys.js
 application.properties
 .env
 
+.idea
+*.iml

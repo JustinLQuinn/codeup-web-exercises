@@ -1,0 +1,16 @@
+.main-header{
+    text-align: center;
+}
+.container1-main{
+    display: block;
+}
+.homeimg{
+    display: block;
+    margin: 0 auto;
+    height: 300px;
+}
+.changeimg{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
