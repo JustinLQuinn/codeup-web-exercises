@@ -1,3 +1,4 @@
+/*Home Page*/
 .main-header{
     text-align: center;
 }
@@ -13,4 +14,15 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+.form-control{
+    display: block;
+    width: 125px;
+    border-style: outset;
+    margin-right: auto;
+    margin-left: auto;
+}
+#my-quotes.card{
+    display: flex;
+    margin: 5px;
 }
