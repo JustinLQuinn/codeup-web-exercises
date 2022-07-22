@@ -1,3 +1,5 @@
+/*All*/
+
 /*Home Page*/
 .main-header{
     text-align: center;
@@ -22,15 +24,26 @@
     margin-right: auto;
     margin-left: auto;
 }
+/*Quotes*/
 #my-quotes{
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 .quotescard{
     width: 180px;
     height: fit-content;
     margin: 5px;
     text-align: center;
+    background-color: silver;
     margin-top: auto;
     margin-bottom: auto;
 }
+#card-quote{
+    color: darkgreen;
+}
+#card-author{
+color: brown;
+}
+
+/*Page name*/

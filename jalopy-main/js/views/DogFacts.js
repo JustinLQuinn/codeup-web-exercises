@@ -1,6 +1,6 @@
 export default function DogFactsView(props) {
     return `
-<div class="container">
+<div class="container-fluid quotescontainer">
     <h1>Dog Facts</h1>
     <div class="card">
         <div class="card-body">
