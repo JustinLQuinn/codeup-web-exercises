@@ -22,7 +22,15 @@
     margin-right: auto;
     margin-left: auto;
 }
-#my-quotes.card{
+#my-quotes{
     display: flex;
+    flex-wrap: wrap;
+}
+.quotescard{
+    width: 180px;
+    height: fit-content;
     margin: 5px;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
 }
