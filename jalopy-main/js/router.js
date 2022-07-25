@@ -8,9 +8,11 @@ import {RegisterEvent} from "./views/Register.js";
 import UserIndex, {UserEvents} from "./views/User.js";
 import Logout, {LogoutEvents} from "./views/Logout.js";
 import aboutHTMLFunction, {aboutJSFunction} from "./views/About.js";
-import DogFactsView, {DogFactsEvents} from "./views/DogFacts.js";
+import dogFactsHTMLFunction, {DogFactsEvents} from "./views/DogFacts.js";
 import QuotesView, {QuotesEvents} from "./views/Quotes.js";
-import dogFactsHTMLFunction from "./views/DogFacts.js";
+import addDogFactHTMLFunction, {addDogFactEvents} from "./views/addDogFact.js";
+import addQuoteHTMLFunction, {addQuoteEvents} from "./views/addQuote.js";
+
 /**
  * Returns the route object for a specific route based on the given URI
  * @param URI
@@ -87,6 +89,13 @@ export default function router(URI) {
             title: 'Dog Facts',
             viewEvent: DogFactsEvents
         },
+        '/insert-dog-fact': {
+            returnView: addDogFactHTMLFunction,
+            state: {},
+            uri: '/insert-dog-fact',
+            title: 'Insert Dog Fact',
+            viewEvent: addDogFactEvents
+        },
         '/quotes': {
             returnView: QuotesView,
             state:{
@@ -101,7 +110,14 @@ export default function router(URI) {
             uri: '/quotes',
             title: 'Quotes',
             viewEvent: QuotesEvents
-        }
+        },
+        '/insert-Quote': {
+        returnView: addQuoteHTMLFunction,
+        state: {},
+        uri: '/insert-Quote',
+        title: 'Add Quote',
+        viewEvent: addQuoteEvents
+    }
 
     };
 

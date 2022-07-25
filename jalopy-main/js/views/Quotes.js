@@ -2,13 +2,15 @@ let currentQuoteIndex = 0;
 let quotes = [];
 export default function QuotesView(props) {
     quotes = props.quotes
-    // console.log(props);
+    console.log(props);
     return `
 <div id="my-quotes">
 <!--    <div class="card">-->
         
 <!--    </div>-->
 </div>
+<a data-link href="/insert-Quote">Add Quote</a>
+
 `
 }
 function addQuote() {
@@ -20,7 +22,7 @@ function addQuote() {
 </div>
 `;
         currentQuoteIndex++;
-        if (currentQuoteIndex === 3){
+        if (currentQuoteIndex === quotes.length){
             document.querySelector("body").removeEventListener("click", addQuote);
 
         }

@@ -33,14 +33,14 @@ export default function homeHTMLFunction(props) {
 
 export function homeJSFunction() {
     // const button = document.querySelector(".changeimg");
-    dummyfunction();
+    changeIcon();
     // button.addEventListener("click",  dummyfunction);
 }
-    function dummyfunction(){
+    function changeIcon(){
         const img = document.querySelector("#img1");
         img.setAttribute("src", imagePaths[currentImageIndex]);
         currentImageIndex++;
-        if (currentImageIndex === 6) {
+        if (currentImageIndex === imagePaths.length) {
             currentImageIndex = 0;
         }
     }
