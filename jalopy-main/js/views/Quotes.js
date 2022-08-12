@@ -1,8 +1,13 @@
 let currentQuoteIndex = 0;
 let quotes = [];
 export default function QuotesView(props) {
+    for (let i = 0; i < props.quotes.length; i++) {
+        if(props.quotes[i].quote === ''){
+            props.quotes.splice(i);
+        }
+    }
     quotes = props.quotes
-    console.log(props);
+    console.log(quotes);
     return `
 <div id="my-quotes">
 <!--    <div class="card">-->
@@ -16,7 +21,7 @@ export default function QuotesView(props) {
 function addQuote() {
     let quoteCards = document.querySelector("#my-quotes");
 
-        quoteCards.innerHTML += `
+    quoteCards.innerHTML += `
 <div class="card quotescard">
      <q id="card-quote">${quotes[currentQuoteIndex].quote}</q><p id="card-author"><q>${quotes[currentQuoteIndex].author}</q></p>
 </div>

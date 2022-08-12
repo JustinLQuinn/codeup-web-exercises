@@ -24,6 +24,10 @@ function addNewQuote (){
     const quote = quoteInput.value.trim();
     const authorInput = document.querySelector("#AuthorText");
     const author = authorInput.value.trim();
+    // console.log(quote);
+    // console.log(quote.length);
+    // console.log(author);
+    // console.log(author.length);
     if (quote.length && author.length < 1) {
        alert("Please add data!");
         return;
